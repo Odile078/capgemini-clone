@@ -1,3 +1,155 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer components{
+    .header{
+        @apply bg-slate-500 py-4 fixed w-full top-0 bg-opacity-90 z-20 ;
+        /* background: linear-gradient(#000, #fff); */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0));
+    }
+    .header--default{
+        @apply mx-6 space-y-3 hidden lg:block
+    }
+    .header--mobile{
+        @apply ml-6 flex justify-between items-center lg:hidden
+    }
+    .header__mobile--right{
+        @apply flex items-center space-x-3
+    }
+   
+    .header__top{
+        @apply  flex justify-end items-center
+    }
+   
+    .header__bottom{
+        @apply  flex justify-between items-center
+    }
+    .nav{
+        @apply flex space-x-4
+    }
+    .nav__item{
+        @apply text-sm
+    }
+    .nav__link{
+        @apply no-underline text-white
+    }
+    .nav__link--hover{
+        @apply hover:underline hover:text-brandBlue
+    }
+    .nav__link .nav__logo{
+        @apply text-white
+    }
+    .nav__link .nav__link--hover .nav__logo{
+        @apply text-black
+    }
+    .header__search{
+        @apply flex space-x-1 items-center
+    }
+    /* Hero */
+    .hero{
+        @apply relative h-screen top-0
+    }
+    .hero__img{
+        @apply h-4/6  md:h-screen absolute top-0 inset-x-0 w-full object-cover object-center
+    }
+    .hero__content{
+        @apply absolute bottom-4 md:bottom-32 w-full md:w-4/12   px-4 py-10 
+    }
+    .hero__content div{
+        @apply text-white space-y-4 bg-brandBlue py-20 px-4 rounded-md bg-opacity-60
+    }
+    .hero__headline{
+        @apply text-2xl
+    }
+    .hero__subhead{
+        @apply text-base
+    }
+    .report{
+        @apply bg-gray-50 flex flex-col md:flex-row p-4 md:p-16 md:items-center
+    }
+    .report__img{
+        @apply md:w-2/5 order-first md:order-last
+    }
+    .report__img img{
+        @apply w-full h-full object-cover object-center md:h-96
+    }
+    .report__content{
+        @apply md:flex-1 mx-10 -mt-10 md:-mr-20  z-10 md:mt-0 bg-white p-10 
+
+    }
+    .report__tittle{
+        @apply font-bold text-2xl text-gray-900 pb-6
+    }
+    .report__description{
+        @apply text-base pb-6
+    }
+    .report__action{
+        @apply flex justify-end pt-6
+    }
+    .report__button{
+        @apply space-x-1 md:border md:border-l-gray-900 md:rounded-2xl 
+    }
+    .insights{
+        @apply py-10 px-4 md:pl-0 md:pr-16 ;
+      
+            background: url('../svg/xl-shape-and-blue-line-2.svg') no-repeat 100%/100% auto;
+            background-size: contain;
+    }
+    .insights__tittle{
+        @apply font-bold text-2xl text-gray-900 px-16 py-6
+    }
+    .button{
+        @apply text-sm border py-2 px-6
+    }
+    .button--white{
+        @apply text-white border-white
+    }
+    .button--black{
+        @apply text-gray-900 border-gray-900
+    }
+    .insights__top-card{
+        @apply flex flex-col md:flex-row p-4 md:p-16 md:items-center
+    }
+    .insights__left-card{
+        @apply md:w-4/5 md:h-96
+    }
+    .insights__right-card{
+        @apply md:flex-1 mx-10 -mt-10 md:-ml-20  z-10 md:mt-0 bg-white p-10 rounded-md pb-32
+    }
+     .latest-insights .card-tag::before{
+        @apply text-xs;
+            content: "";
+            width: 1.1875rem;
+            height: 0.0625rem;
+            margin-right: 0.5rem;
+            background: currentColor;
+            display: inline-block;
+            vertical-align: middle;
+            transition: all .2s ease-in-out;
+
+    } 
+    .box-tag:before {
+        content: "";
+        width: 19px;
+        height: 1px;
+        background: #15011d;
+        display: inline-block;
+        vertical-align: middle;
+        transition: all .2s ease-in-out;
+        margin-right: 0.5rem;
+    }
+    .storyTag:before {
+        content: "";
+        width: calc((19/16)*1rem);
+        height: calc((1/16)*1rem);
+        margin-right: calc((8/16)*1rem);
+        background: #15011d;
+        display: inline-block;
+        vertical-align: middle;
+        transition: all .2s ease-in-out;
+    } 
+    .card-title{
+        @apply font-bold text-2xl 
+    }
+
+}
